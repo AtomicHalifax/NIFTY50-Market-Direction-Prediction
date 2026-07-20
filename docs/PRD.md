@@ -41,3 +41,14 @@ To what extent does combining domestic and global financial indicators improve t
 - Evaluate multiple machine learning models under identical experimental settings.
 - Identify the financial indicators that contribute most to prediction performance.
 - Build a reproducible, explainable, and well-documented machine learning project.
+
+# 6. Success Criteria
+
+The project will be considered successful if it satisfies the following criteria:
+
+- A complete end-to-end machine learning pipeline is implemented.
+- Three experimental groups (Domestic, Global, Combined) are evaluated under the same methodology.
+- Multiple machine learning models are trained and compared fairly.
+- Every selected financial indicator has a documented justification.
+- Results are presented using appropriate evaluation metrics and visualizations.
+- The project is fully reproducible with clear documentation and setup instructions.
