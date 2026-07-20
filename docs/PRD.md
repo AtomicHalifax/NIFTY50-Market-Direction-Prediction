@@ -17,3 +17,13 @@ The primary objective is to identify which group of indicators contributes most 
 ## Project Hypothesis
 
 > Combining domestic and global financial indicators will provide better predictive performance than using either group independently.
+
+# 2. Problem Statement
+
+Predicting the next day's stock market direction is a challenging machine learning problem because financial markets are influenced by numerous domestic and global economic factors. While many indicators are believed to affect market behaviour, it is often unclear which indicators provide the most meaningful predictive information.
+
+This project aims to address this challenge by systematically comparing domestic financial indicators, global financial indicators, and their combination to determine which group contributes most effectively to predicting the next trading day's NIFTY50 market direction.
+
+# 3. Research Question
+
+Can combining domestic and global financial indicators improve the prediction of the next trading day's NIFTY50 market direction compared to using either group independently?
