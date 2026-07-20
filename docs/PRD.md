@@ -72,3 +72,11 @@ The project will be considered successful if it satisfies the following criteria
 - Deep learning models.
 - Reinforcement learning.
 - News sentiment and social media analysis (Version 1).
+
+# 8. Constraints
+
+- The project relies on publicly available historical financial data.
+- Only information available before market close will be used for prediction.
+- The project focuses exclusively on NIFTY50 market direction.
+- Model performance is dependent on the quality and availability of historical data.
+- The project is limited to traditional machine learning models in Version 1.
