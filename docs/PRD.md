@@ -80,3 +80,21 @@ The project will be considered successful if it satisfies the following criteria
 - The project focuses exclusively on NIFTY50 market direction.
 - Model performance is dependent on the quality and availability of historical data.
 - The project is limited to traditional machine learning models in Version 1.
+
+# 9. Risks
+
+- Financial markets are highly dynamic and influenced by unpredictable events.
+- Historical relationships between indicators may change over time.
+- Some financial indicators may have limited predictive value.
+- Data quality or missing values may affect model performance.
+- High model accuracy does not guarantee future market performance.
+
+# 10. Deliverables
+
+- A reproducible machine learning pipeline.
+- Cleaned and processed financial datasets.
+- Comparative analysis of domestic, global, and combined indicators.
+- Performance comparison across multiple machine learning models.
+- Visualizations explaining model performance and feature importance.
+- Complete project documentation.
+- Open-source GitHub repository with setup instructions.
