@@ -1,6 +1,6 @@
 # Project Requirements Document (PRD)
 
-> **Status:** In Progress
+This document defines the objectives, scope, requirements, and engineering decisions for the NIFTY50 Market Direction Prediction project.
 
 ---
 
