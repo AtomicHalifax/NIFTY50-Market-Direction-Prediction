@@ -52,3 +52,23 @@ The project will be considered successful if it satisfies the following criteria
 - Every selected financial indicator has a documented justification.
 - Results are presented using appropriate evaluation metrics and visualizations.
 - The project is fully reproducible with clear documentation and setup instructions.
+
+# 7. Project Scope
+
+## In Scope
+
+- Predict the next trading day's NIFTY50 market direction.
+- Use domestic financial indicators.
+- Use global financial indicators.
+- Compare domestic, global, and combined feature sets.
+- Train and evaluate multiple traditional machine learning models.
+- Build a reproducible machine learning pipeline.
+
+## Out of Scope
+
+- Individual stock prediction.
+- Intraday trading prediction.
+- Live trading or automated trading systems.
+- Deep learning models.
+- Reinforcement learning.
+- News sentiment and social media analysis (Version 1).
