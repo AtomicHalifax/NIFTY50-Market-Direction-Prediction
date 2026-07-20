@@ -24,6 +24,20 @@ Predicting the next day's stock market direction is a challenging machine learni
 
 This project aims to address this challenge by systematically comparing domestic financial indicators, global financial indicators, and their combination to determine which group contributes most effectively to predicting the next trading day's NIFTY50 market direction.
 
-# 3. Research Question
+# 3. Problem Statement
 
-Can combining domestic and global financial indicators improve the prediction of the next trading day's NIFTY50 market direction compared to using either group independently?
+Predicting the next day's stock market direction is a challenging machine learning problem because financial markets are influenced by numerous domestic and global economic factors. While many indicators are believed to affect market behaviour, it is often unclear which indicators provide the most meaningful predictive information.
+
+This project aims to address this challenge by systematically comparing domestic financial indicators, global financial indicators, and their combination to determine which group contributes most effectively to predicting the next trading day's NIFTY50 market direction.
+
+# 4. Research Question
+
+To what extent does combining domestic and global financial indicators improve the prediction of the next trading day's NIFTY50 market direction compared to using either group independently?
+
+# 5. Project Objectives
+
+- Predict the next trading day's NIFTY50 market direction using machine learning.
+- Compare the predictive performance of domestic indicators, global indicators, and their combination.
+- Evaluate multiple machine learning models under identical experimental settings.
+- Identify the financial indicators that contribute most to prediction performance.
+- Build a reproducible, explainable, and well-documented machine learning project.
