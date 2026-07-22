@@ -24,17 +24,11 @@ Predicting the next day's stock market direction is a challenging machine learni
 
 This project aims to address this challenge by systematically comparing domestic financial indicators, global financial indicators, and their combination to determine which group contributes most effectively to predicting the next trading day's NIFTY50 market direction.
 
-# 3. Problem Statement
-
-Predicting the next day's stock market direction is a challenging machine learning problem because financial markets are influenced by numerous domestic and global economic factors. While many indicators are believed to affect market behaviour, it is often unclear which indicators provide the most meaningful predictive information.
-
-This project aims to address this challenge by systematically comparing domestic financial indicators, global financial indicators, and their combination to determine which group contributes most effectively to predicting the next trading day's NIFTY50 market direction.
-
-# 4. Research Question
+# 3. Research Question
 
 To what extent does combining domestic and global financial indicators improve the prediction of the next trading day's NIFTY50 market direction compared to using either group independently?
 
-# 5. Project Objectives
+# 4. Project Objectives
 
 - Predict the next trading day's NIFTY50 market direction using machine learning.
 - Compare the predictive performance of domestic indicators, global indicators, and their combination.
@@ -42,7 +36,7 @@ To what extent does combining domestic and global financial indicators improve t
 - Identify the financial indicators that contribute most to prediction performance.
 - Build a reproducible, explainable, and well-documented machine learning project.
 
-# 6. Success Criteria
+# 5. Success Criteria
 
 The project will be considered successful if it satisfies the following criteria:
 
@@ -53,7 +47,7 @@ The project will be considered successful if it satisfies the following criteria
 - Results are presented using appropriate evaluation metrics and visualizations.
 - The project is fully reproducible with clear documentation and setup instructions.
 
-# 7. Project Scope
+# 6. Project Scope
 
 ## In Scope
 
@@ -73,7 +67,7 @@ The project will be considered successful if it satisfies the following criteria
 - Reinforcement learning.
 - News sentiment and social media analysis (Version 1).
 
-# 8. Constraints
+# 7. Constraints
 
 - The project relies on publicly available historical financial data.
 - Only information available before market close will be used for prediction.
@@ -81,7 +75,7 @@ The project will be considered successful if it satisfies the following criteria
 - Model performance is dependent on the quality and availability of historical data.
 - The project is limited to traditional machine learning models in Version 1.
 
-# 9. Risks
+# 8. Risks
 
 - Financial markets are highly dynamic and influenced by unpredictable events.
 - Historical relationships between indicators may change over time.
@@ -89,7 +83,7 @@ The project will be considered successful if it satisfies the following criteria
 - Data quality or missing values may affect model performance.
 - High model accuracy does not guarantee future market performance.
 
-# 10. Deliverables
+# 9. Deliverables
 
 - A reproducible machine learning pipeline.
 - Cleaned and processed financial datasets.
