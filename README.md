@@ -2,6 +2,7 @@
 
 > 📈 An end-to-end Machine Learning pipeline for predicting the next-day direction of the NIFTY 50 Index using historical market data, global financial indicators, and technical analysis.
 
+
 <p align="center">
 
 ![Python](https://img.shields.io/badge/Python-3.11-blue?style=for-the-badge&logo=python)
@@ -26,9 +27,8 @@ Rather than focusing solely on model performance, this repository emphasizes **r
 
 # End-to-End Workflow
 
-<p align="center">
-<img src="reports/figures/presentation/workflow_diagram.png" width="100%">
-</p>
+<img width="1536" height="1024" alt="Workflow" src="https://github.com/user-attachments/assets/590316a2-1fd7-4ed6-a204-0efdc0321dbf" />
+
 
 The project follows a structured machine learning workflow beginning with historical market data collection and progressing through preprocessing, feature engineering, chronological data splitting, model development, hyperparameter tuning, feature refinement, and final evaluation.
 
@@ -38,9 +38,7 @@ This modular workflow ensures reproducibility while minimizing data leakage in a
 
 # Project Architecture
 
-<p align="center">
-<img src="reports/figures/presentation/01_project_overview.png" width="100%">
-</p>
+<img width="1376" height="768" alt="image" src="https://github.com/user-attachments/assets/217c43ee-a598-429b-ab05-b5fc799629cb" />
 
 The architecture integrates multiple financial markets into a unified prediction pipeline.
 
@@ -73,8 +71,8 @@ These datasets are synchronized chronologically before feature engineering and m
 # Machine Learning Pipeline
 
 <p align="center">
-<img src="reports/figures/presentation/02_ml_pipeline.png" width="100%">
-</p>
+<img width="1376" height="768" alt="image" src="https://github.com/user-attachments/assets/04e1bdde-84d1-4cdf-9caa-1c52f1e9f302" />
+
 
 The pipeline was designed following a modular architecture where each stage can be independently reproduced, validated, and improved.
 
@@ -94,8 +92,7 @@ Major stages include:
 # Data Collection
 
 <p align="center">
-<img src="reports/figures/presentation/03_data_ingestion.png" width="100%">
-</p>
+<img width="1376" height="768" alt="image" src="https://github.com/user-attachments/assets/f70032bc-24d2-48f8-823b-9bc7f4bff7dd" />
 
 Historical market data was collected using the **Yahoo Finance API (yfinance)**.
 
@@ -117,8 +114,8 @@ The collected datasets were aligned by trading date before preprocessing and fea
 # Feature Engineering
 
 <p align="center">
-<img src="reports/figures/presentation/04_feature_engineering.png" width="100%">
-</p>
+<img width="1376" height="768" alt="image" src="https://github.com/user-attachments/assets/9f92e72a-5753-4416-9aa1-4f53a8f6ccef" />
+
 
 Raw market prices alone rarely capture the complete dynamics of financial markets.
 
