@@ -2,9 +2,6 @@
 
 > 📈 An end-to-end Machine Learning pipeline for predicting the next-day direction of the NIFTY 50 Index using historical market data, global financial indicators, and technical analysis.
 
-
-<p align="center">
-
 ![Python](https://img.shields.io/badge/Python-3.11-blue?style=for-the-badge&logo=python)
 ![scikit-learn](https://img.shields.io/badge/scikit--learn-ML-orange?style=for-the-badge&logo=scikitlearn)
 ![XGBoost](https://img.shields.io/badge/XGBoost-Boosting-red?style=for-the-badge)
