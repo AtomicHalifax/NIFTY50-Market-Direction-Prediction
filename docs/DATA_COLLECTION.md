@@ -53,6 +53,8 @@ data = yf.download(
     start=start_date,
     end=end_date
 )
+
+
 Market Instruments Collected 🌎
 
 To capture both domestic and global market influences, multiple financial indicators were collected.
