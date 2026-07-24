@@ -1,22 +1,24 @@
 # Data Collection 🗂️
 
-This document explains the data collection process used for the NIFTY50 Market Direction Prediction project.
+This document explains the data collection process used for the **NIFTY50 Market Direction Prediction** project.
 
 The objective was to collect historical market data from multiple financial instruments and create a unified dataset for machine learning-based market direction prediction.
 
 The data collection pipeline followed:
 
+```text
 Financial Data Sources
-↓
+          ↓
 Historical Data Download
-↓
+          ↓
 Data Cleaning
-↓
+          ↓
 Data Alignment
-↓
+          ↓
 Return Calculation
-↓
+          ↓
 Final Dataset Creation
+```
 
 ---
 
@@ -29,7 +31,7 @@ Yahoo Finance was selected as the primary data source because it provides:
 - Historical OHLCV market data
 - Multiple global financial instruments
 - Long-term historical availability
-- Easy accessibility through Python using `yfinance`
+- Free accessibility through the `yfinance` Python library
 
 The data was collected programmatically to ensure:
 
@@ -41,9 +43,9 @@ The data was collected programmatically to ensure:
 
 # Data Collection Library 🐍
 
-The `yfinance` Python library was used to collect historical market data.
+The project uses the `yfinance` Python library to download historical market data.
 
-Example workflow:
+Example:
 
 ```python
 import yfinance as yf
@@ -53,223 +55,269 @@ data = yf.download(
     start=start_date,
     end=end_date
 )
+```
 
+---
 
-Market Instruments Collected 🌎
+# Market Instruments Collected 🌍
 
-To capture both domestic and global market influences, multiple financial indicators were collected.
+To capture both domestic and global influences on the Indian stock market, data was collected from multiple financial instruments.
 
-Indian Market Data 🇮🇳
-NIFTY 50 Index
+---
 
-Ticker:
+## 🇮🇳 NIFTY 50 Index
 
-^NSEI
+**Ticker:** `^NSEI`
 
-Features collected:
+Collected Features:
 
-Open
-High
-Low
-Close
-Volume
-
-Purpose:
-
-Represents the overall movement of the Indian equity market.
-
-Global Market Indicators 🌐
-
-Global markets were included because international movements can influence Indian markets.
-
-S&P 500
+- Open
+- High
+- Low
+- Close
+- Volume
 
 Purpose:
 
-Represents broad US market performance.
+Represents the overall performance of the Indian equity market and serves as the target market for prediction.
 
-Collected:
+---
 
-Open
-High
-Low
-Close
-Volume
-NASDAQ
+## 📉 India VIX
 
-Purpose:
+Collected Features:
 
-Captures global technology sector performance and investor sentiment.
-
-Collected:
-
-Open
-High
-Low
-Close
-Volume
-Dow Jones
+- Open
+- High
+- Low
+- Close
 
 Purpose:
 
-Represents large-cap US market movements.
+Measures expected market volatility and investor uncertainty.
 
-Collected:
+---
 
-Open
-High
-Low
-Close
-Volume
-Other Financial Indicators 📈
-Volatility Index (VIX)
+## 🇺🇸 S&P 500
 
-Purpose:
+Collected Features:
 
-Measures market uncertainty and investor fear.
-
-Collected:
-
-Open
-High
-Low
-Close
-USD/INR Exchange Rate
+- Open
+- High
+- Low
+- Close
+- Volume
 
 Purpose:
 
-Currency movement can influence foreign investment and Indian markets.
+Represents the overall performance of the US stock market.
 
-Collected:
+---
 
-Open
-High
-Low
-Close
-Crude Oil
+## 💻 NASDAQ Composite
+
+Collected Features:
+
+- Open
+- High
+- Low
+- Close
+- Volume
 
 Purpose:
 
-Energy prices influence inflation, economic conditions, and market sentiment.
+Captures movements in the technology sector, which often influences global investor sentiment.
 
-Collected:
+---
 
-Open
-High
-Low
-Close
-Volume
-Historical Period ⏳
+## 🏛️ Dow Jones Industrial Average
 
-The dataset covers:
+Collected Features:
 
-Start Date:
-2008-03-04
+- Open
+- High
+- Low
+- Close
+- Volume
 
-End Date:
-2026-07-21
+Purpose:
 
-The long historical period was selected to include:
+Represents large-cap US companies and provides additional global market context.
 
-Different market cycles
-Bull and bear markets
-Economic changes
-High volatility periods
-Data Cleaning 🧹
+---
 
-After downloading, the data was processed before model development.
+## 💱 USD/INR Exchange Rate
 
-Steps performed:
+Collected Features:
 
-Missing Value Handling
+- Open
+- High
+- Low
+- Close
 
-Financial markets may have missing values due to:
+Purpose:
 
-Different trading holidays
-Market closures
-Different operating calendars
+Currency movements affect foreign investments, imports, exports, and overall market sentiment.
 
-Missing values were handled to maintain consistency across datasets.
+---
 
-Data Alignment
+## 🛢️ Crude Oil
 
-Since different markets operate in different time zones, all datasets were aligned using trading dates.
+Collected Features:
 
-This ensured that each row represented comparable market information.
+- Open
+- High
+- Low
+- Close
+- Volume
 
-Feature Organization
+Purpose:
 
-The final dataset combined:
+Crude oil prices influence inflation, transportation costs, and economic activity.
 
-NIFTY 50 data
-Global market indicators
-Currency data
-Commodity data
+---
 
-into a single dataframe.
+# Historical Data Coverage ⏳
 
-Return Calculation 📉
+The collected dataset spans:
 
-Daily returns were calculated for major market indicators.
+| Information | Value |
+|------------|-------|
+| Start Date | 2008-03-04 |
+| End Date | 2026-07-21 |
+
+The long historical period was chosen to include:
+
+- Bull markets
+- Bear markets
+- High-volatility periods
+- Economic cycles
+- Different market conditions
+
+---
+
+# Data Cleaning 🧹
+
+After downloading the data, several preprocessing steps were performed before model development.
+
+## Missing Value Handling
+
+Different markets operate on different trading calendars.
+
+Missing values may occur because of:
+
+- Market holidays
+- Different trading sessions
+- Delayed market openings
+
+These values were handled to create a consistent dataset across all financial instruments.
+
+---
+
+## Data Alignment
+
+Since all markets trade in different regions and time zones, the downloaded datasets were aligned using trading dates.
+
+This ensured that every row represented the same trading period across all markets.
+
+---
+
+## Dataset Integration
+
+Individual datasets were merged into a single dataframe containing:
+
+- Indian market data
+- Global indices
+- Currency data
+- Commodity data
+
+This unified dataset served as the foundation for feature engineering and model development.
+
+---
+
+# Daily Return Features 📈
+
+Daily percentage returns were calculated for major financial instruments.
 
 Formula:
 
-Return = (Current Price - Previous Price) / Previous Price
+```text
+Return = (Current Price − Previous Price) / Previous Price
+```
 
-Returns were added because:
+Generated return features:
 
-They normalize price movements
-Allow comparison between different markets
-Capture daily momentum
+- NIFTY_Return
+- SP500_Return
+- NASDAQ_Return
+- DOW_Return
+- USDINR_Return
+- CRUDE_Return
+- VIX_Return
 
-Generated features:
+Returns help normalize price movements and allow comparisons between assets with different price ranges.
 
-NIFTY_Return
-SP500_Return
-NASDAQ_Return
-DOW_Return
-USDINR_Return
-CRUDE_Return
-VIX_Return
-Final Dataset 📋
+---
+
+# Final Dataset 📋
 
 After data collection and preprocessing:
 
-Dataset Shape:
+| Property | Value |
+|----------|-------|
+| Dataset Size | **4347 rows × 41 columns** |
 
-4347 rows × 41 columns
+The dataset includes:
 
-The dataset contained:
+- Original market features
+- Daily return features
 
-Original market features
-Daily return features
-Engineered technical indicators (added later)
-Data Leakage Prevention 🔒
+Additional technical indicators were created later during the feature engineering stage.
 
-Financial data requires careful handling because future information can easily leak into training.
+---
 
-To prevent leakage:
+# Preventing Data Leakage 🔒
 
-Data was sorted chronologically
-Future values were not used during training
-Time-based train/validation/test splitting was applied
-Data Collection Outcome ✅
+Financial time-series data requires careful handling to avoid introducing future information into the training process.
 
-The final dataset provided a foundation for:
+To prevent data leakage:
 
-Exploratory data analysis
-Feature engineering
-Machine learning model training
-Model evaluation
+- Data was sorted chronologically.
+- Future observations were never used during training.
+- A time-based train/validation/test split was applied instead of random splitting.
 
-The collected data represents a combination of:
+This ensures that model evaluation closely resembles real-world forecasting.
 
-Indian Market Factors
+---
+
+# Data Collection Outcome ✅
+
+The completed dataset provided a strong foundation for:
+
+- Exploratory Data Analysis (EDA)
+- Feature Engineering
+- Machine Learning Model Development
+- Model Evaluation
+- Financial Time-Series Prediction
+
+The final data pipeline can be summarized as:
+
+```text
+Indian Market Data
           +
-Global Market Signals
+Global Market Indices
           +
-Currency & Commodity Effects
+Volatility Index
           +
-Technical Indicators
+Currency Data
+          +
+Commodity Prices
           ↓
-Machine Learning Prediction Pipeline
+Data Cleaning & Alignment
+          ↓
+Daily Return Calculation
+          ↓
+Unified Dataset
+          ↓
+Machine Learning Pipeline
+```
